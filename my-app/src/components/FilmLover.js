@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getFilm } from '../states/actionCreators';
+import { Link } from 'react-router-dom';
 
 const FilmLover = ({ movies,  getFilm }) => {
 	useEffect(
@@ -11,11 +12,14 @@ const FilmLover = ({ movies,  getFilm }) => {
 	);
 
 	return (
-		<div>
+		<div className='all-movie'>
+			<h4><i>Click on Individual Movie for more details on it!</i></h4>
 			{movies.map((film) => {
 				return (
-					<div key={film.id}>
-						<p>{film.title}</p>
+					<div key={film.id} >
+					<Link to={`/FilmDetailed/${film.id}`} key={film.id}>           
+						<p className='special'>{film.title}</p>
+					</Link>
 					</div>
 				);
 			})}
@@ -24,9 +28,8 @@ const FilmLover = ({ movies,  getFilm }) => {
 };
 
 const mapStateToProps = (state) => {
-    debugger
 	return {
-		movies: state.films,
+		movies: state.reducer.films,
 	};
 };
 

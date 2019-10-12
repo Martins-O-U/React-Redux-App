@@ -1,5 +1,73 @@
+body{
+  background: #FFA07A;
+}
+
 .App {
   text-align: center;
 }
 
+.all-movie{
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+  0 5px 10px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  background: #FFEBCD;
+  margin-bottom: 3%;
+}
 
+.description{
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+  0 2px 3px rgba(0, 0, 0, 0.24);
+  padding: 10px 3px;
+  background: #FAEBD7;
+}
+.special{
+  background: #87CEFA;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.special:hover{
+  background: #FF7F50;
+}
+.all-movie p{
+  color: black;
+}
+.movie-card {
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  background: whitesmoke;
+}
+
+.movie-card h3 {
+  font-size: 2rem;
+  margin-top: 1px;
+  margin-bottom: -3px;
+}
+
+.intro{
+  text-shadow: 1px 1px 1px lightblue, 
+  3px 3px 5px darkgray;
+}
+
+.dir-prod{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button{
+  display: flex;
+  justify-content: flex-start;
+  background: #B0C4DE;
+  margin-top: 1%;
+}
+
+a{
+  text-decoration: none;
+}

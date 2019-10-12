@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
-
+import { Route, Link} from 'react-router-dom';
 import FilmLover from './components/FilmLover';
+import FilmDetailed from './components/FilmDetailed';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>How Well Do you know your Movies</h1>
+      <header>
+        <Link to={'/'}>           
+        <button>Home</button>
+        </Link>
+        <h1 className='intro'>Great Movies Collections</h1>
       </header>
       <div>
-        <FilmLover />
+        <Route exact path ='/' component={FilmLover}/>
+        <Route path="/FilmDetailed/:id" component={FilmDetailed} />
       </div>
     </div>
   );
