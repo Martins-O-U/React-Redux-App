@@ -7,7 +7,6 @@ export const getFilm = () => {
         .get('https://ghibliapi.herokuapp.com/films')
         .then(res => {
             dispatch({ type: types.ADD_FILMS, payload: res.data })
-            console.log(res.data)
         })
         .catch(err => {
             console.log(err.message);

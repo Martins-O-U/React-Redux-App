@@ -2,18 +2,10 @@ import * as types from "./types";
 
 const initialState = {
     films: [],
-    // isFetching: false,
-    // error: ''
 };
 
 export const reducer = (state = initialState, action) => {
     switch(action.type){
-        // case types.FETCHING_JOKE_START:
-        //     return {
-        //         ...state,
-        //         isFetching: true,
-        //         error: ""
-        //     }
         case types.ADD_FILMS:
             return {
                 ...state,
@@ -23,3 +15,16 @@ export const reducer = (state = initialState, action) => {
         return state
     }
 } 
+
+const iniState =[];
+export const oneMovie =(state = iniState, action)=>{
+    switch(action.type){
+        case types.DISPLAY_FILM:
+            return {
+                ...state,
+                film: action.payload,
+            }
+        default:
+            return state
+    }
+}
